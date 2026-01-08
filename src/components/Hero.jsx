@@ -1,8 +1,13 @@
 import { useGSAP } from "@gsap/react"
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import { useMediaQuery } from "react-responsive";
 
 const Hero = () => {
+
+    const videoRef = useRef();
+
+    const isMobile = useMediaQuery({ maxWidth: 767 });
 
     useGSAP(() => {
         const heroSplit = new SplitText('.title', {type: 'chars, words'});
@@ -75,6 +80,17 @@ const Hero = () => {
                     </div>
                 </div>
             </section>
+            <div className="video absolute inset-0">
+                <video 
+                    ref = {videoRef}
+                    src="/videos/input.mp4"
+                    muted
+                    playsInline
+                    preload="auto"
+                >
+
+                </video>
+            </div>
         </>
     )
 }
