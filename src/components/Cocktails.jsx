@@ -1,4 +1,4 @@
-import { cocktailLists } from "../../constants";
+import { cocktailLists, mockTailLists } from "../../constants";
 
 const Cocktails = () => {
     return (
@@ -8,18 +8,34 @@ const Cocktails = () => {
 
             <div className="list">
                 <div className="popular">
-                    <h2>Most populaire cocktails</h2>
+                    <h2>Most populaire cocktails: </h2>
 
                     <ul>
-                        {cocktailLists.map(({name, country, detail, price}) => {
-                            <li key={drink.name}>
+                        {cocktailLists.map(({ name, country, detail, price }) => (
+                            <li key={name}>
                                 <div className="md:me-28">
-                                    <h3>{drink.name}</h3>
-                                    <p>{drink.country} | {drink.detail}</p>
+                                    <h3>{name}</h3>
+                                    <p>{country} | {detail}</p>
                                 </div>
-                                <span>- {drink.price}</span>
+                                <span>- {price}</span>
                             </li>
-                        })}
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="loved">
+                    <h2>Most loved mocktails: </h2>
+
+                    <ul>
+                        {mockTailLists.map(({ name, country, detail, price }) => (
+                            <li key={name}>
+                                <div className="me-28">
+                                    <h3>{name}</h3>
+                                    <p>{country} | {detail}</p>
+                                </div>
+                                <span>- {price}</span>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
