@@ -1,16 +1,89 @@
-# React + Vite
+# 🍹 GSAP Mojito Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une landing page interactive et animée dédiée au cocktail Mojito, construite avec **React**, **Vite**, **GSAP** et **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## ✨ Caractéristiques
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Animations fluides** : Utilisation de GSAP pour des animations scrollbar sophistiquées
+- **Design responsive** : Compatible avec tous les appareils (mobile, tablette, desktop)
+- **Performance optimisée** : Build rapide avec Vite et hot module replacement
+- **Styling moderne** : Tailwind CSS pour une stylisation rapide et élégante
+- **Sections multiples** : Hero, Cocktails, À Propos, Galerie, Menu et Contact
 
-## React Compiler
+## 🛠️ Stack Technologique
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19.2** - UI Framework
+- **Vite 7.2** - Build tool et dev server
+- **GSAP 3.14** - Animations et effects
+- **Tailwind CSS 4.1** - Utility-first CSS framework
+- **React Responsive 10** - Responsive design utilities
+- **ESLint** - Code linting
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+## 🚀 Démarrage
+
+### Mode développement
+```bash
+npm run dev
+```
+Ouvre [http://localhost:5173](http://localhost:5173) dans votre navigateur.
+
+### Build de production
+```bash
+npm run build
+```
+
+### Aperçu du build
+```bash
+npm run preview
+```
+
+### Linting
+```bash
+npm run lint
+```
+
+## 📁 Structure du Projet
+
+```
+├── src/
+│   ├── components/        # Composants React
+│   │   ├── About.jsx
+│   │   ├── Art.jsx
+│   │   ├── Cocktails.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Menu.jsx
+│   │   └── Navbar.jsx
+│   ├── App.jsx           # Composant principal
+│   ├── index.css         # Styles globaux
+│   └── main.jsx          # Point d'entrée
+├── public/               # Assets statiques
+│   ├── fonts/
+│   ├── images/
+│   └── videos/
+├── constants/            # Constantes de l'application
+├── index.html
+├── vite.config.js
+├── tailwind.config.js
+└── eslint.config.js
+```
+
+## 🎯 Pages et Sections
+
+- **Navbar** : Navigation principale
+- **Hero** : Section d'introduction avec animation GSAP
+- **Cocktails** : Showcase des cocktails Mojito
+- **About** : Informations sur le projet
+- **Art** : Galerie visuelle
+- **Menu** : Menu des cocktails disponibles
+- **Contact** : Formulaire de contact
+
+## 📝 Licence
+
+Ce projet est libre d'utilisation.
